@@ -31,7 +31,7 @@ app.get('/api/hello', (req, res, next) => {
         return axios.get(weatherApiUrl)
     }).then(result => {
         temp = result.data.current.temp_c;
-        return res.json({client_ip: ip, location: `city`, greeting: `Hello, ${name}!, the temperature is at ${temp} degrees Celsius in ${city}`});
+        return res.json({client_ip: ip, location: `${city}`, greeting: `Hello, ${name}!, the temperature is at ${temp} degrees Celsius in ${city}`});
     }).catch(err => console.log(err));
     
 })
