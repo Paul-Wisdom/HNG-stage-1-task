@@ -11,6 +11,10 @@ app.get('/api/hello', (req, res, next) => {
     return res.json({client_ip: ip, message: `hello ${name}`});
 })
 
+app.use('/', (req, res, next) => {
+    return res.json({message: "wow"});
+})
+
 app.listen(port, () => {
     console.log(`server is running on port ${port}`);
 });
