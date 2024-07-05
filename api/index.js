@@ -37,7 +37,7 @@ app.get('/api/hello', (req, res, next) => {
 })
 
 app.use('/', (req, res, next) => {
-    return res.json({message: "wow"});
+    return res.json({message: "Go to /api/hello?visitor_name=Wisdom endpoint. you can replace Wisdom with any name"});
 })
 
 app.listen(port, () => {
